@@ -4,3 +4,33 @@
     margin: 0;
     box-sizing: border-box;
 }
+li,a{
+    text-decoration: none;
+    list-style-type: none;
+}
+body{
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* variables */
+
+/* fonts */
+
+/* base styles */
+
+
+/* desktop styling */
+body{
+    background: -webkit-linear-gradient(to right, #3498db, #2c3e50);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #3498db, #2c3e50); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    padding: 5% 25%;
+}
+.main-todo-card{
+    background: rgba( 255, 255, 255, 0.35 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 2px );
+    -webkit-backdrop-filter: blur( 2px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    padding: 20px 50px;
+}
