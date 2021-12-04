@@ -40,23 +40,31 @@ body{
 }
 .main-input-form{
     margin-bottom: 15px;
-    text-align: center;
+    text-align: center;  
 }
 .todo-input{
     padding: 8px 12px;
     border: none;
+    outline: none;
     border-radius: 5px;
+    font-size: .85em;
+    width: 93%;
 }
 .todo-inpput::focus{
     border: none;
+    outline: none;
 }
 .todo-input-btn{
-    padding: 8px;
+    padding: 8px 12px;
+    background-color: rgb(116, 114, 114);
+    color: #fff;
     border: none;
-    border-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
     margin-left: -12px;
 }
 .main-todo-card li>h2{
     font-size: 1.15em;
 }
+
 
