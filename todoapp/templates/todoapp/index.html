@@ -1,18 +1,19 @@
-{% extends 'base.html' %}
-{% block content %}
-<form action="/addTodoItem" method="post">
-    {% csrf_token %}
-    <input type="text" name="content">
-    <input type="submit" value="Add Todo Item">
+{% extends 'base.html' %} {% block content %}
+<form class="main-input-form" action="/addTodoItem" method="post">
+  {% csrf_token %}
+  <input class="todo-input" type="text" name="content" />
+  <input class="todo-input-btn" type="submit" value="+" />
 </form>
 
 <ul>
-    {% for item in all_items %}
-    <li>{{ item.content }}</li>
-    <form action="/deleteTodoItem/{{ item.id }}/" method="post">
-        {% csrf_token %}
-        <input type="submit" value="Delete">
-    </form>
-    {% endfor %}
+  {% for item in all_items %}
+  <li>
+    <h2>{{ item.content }}</h2>
+  </li>
+  <form action="/deleteTodoItem/{{ item.id }}/" method="post">
+    {% csrf_token %}
+    <input type="submit" value="Delete" />
+  </form>
+  {% endfor %}
 </ul>
 {% endblock content %}
