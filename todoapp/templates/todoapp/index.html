@@ -9,11 +9,12 @@
   {% for item in all_items %}
   <li>
     <h2>{{ item.content }}</h2>
+    <form action="/deleteTodoItem/{{ item.id }}/" method="post">
+      {% csrf_token %}
+      <input type="submit" value="Delete" />
+    </form>
   </li>
-  <form action="/deleteTodoItem/{{ item.id }}/" method="post">
-    {% csrf_token %}
-    <input type="submit" value="Delete" />
-  </form>
+
   {% endfor %}
 </ul>
 {% endblock content %}

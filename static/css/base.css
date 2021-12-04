@@ -63,8 +63,12 @@ body{
     border-bottom-right-radius: 5px;
     margin-left: -12px;
 }
+.main-todo-card li{
+    display: flex;
+}
 .main-todo-card li>h2{
     font-size: 1.15em;
+    margin-right: 10px;
 }
 
 
