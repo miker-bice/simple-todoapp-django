@@ -11,7 +11,7 @@
     <h2>{{ item.content }}</h2>
     <form action="/deleteTodoItem/{{ item.id }}/" method="post">
       {% csrf_token %}
-      <input type="submit" value="Delete" />
+      <input class="delete-btn" type="submit" value="X" />
     </form>
   </li>
 
