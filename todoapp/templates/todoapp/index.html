@@ -1,5 +1,5 @@
 {% extends 'base.html' %} {% block content %}
-<form class="main-input-form" action="/addTodoItem" method="post">
+<form class="main-input-form" action="addTodoItem" method="post">
   {% csrf_token %}
   <input class="todo-input" type="text" name="content" />
   <input class="todo-input-btn" type="submit" value="+" />
@@ -9,7 +9,7 @@
   {% for item in all_items %}
   <li>
     <h2>{{ item.content }}</h2>
-    <form action="/deleteTodoItem/{{ item.id }}/" method="post">
+    <form action="deleteTodoItem/{{ item.id }}/" method="post">
       {% csrf_token %}
       <input class="delete-btn" type="submit" value="X" />
     </form>
